@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerFishEvent;
+import org.bukkit.event.player.PlayerFishEvent.State;
 
 import club.infinitygames.skycore.Module;
 import club.infinitygames.skycore.SkyCore;
@@ -16,5 +17,8 @@ public class FishCatching extends Module implements Listener {
 	
 	@EventHandler
 	public void fishing(PlayerFishEvent e) {
+		if(e.getState() == State.FISHING) {
+			e.getHook().setGlowing(true);
+		}
 	}
 }
