@@ -3,6 +3,7 @@ package club.infinitygames.skycore;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import club.infinitygames.skycore.experimental.FishCatching;
+import club.infinitygames.skycore.experimental.VoidKaboom;
 import club.infinitygames.skycore.help.HelpCommand;
 import club.infinitygames.skycore.listeners.JoinFirework;
 import club.infinitygames.skycore.listeners.VoidStopper;
@@ -15,10 +16,11 @@ public class SkyCore extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 		
-		new VoidStopper();
+		//new VoidStopper();
 		new FishCatching();
 		new JoinFirework();
 		new HelpCommand();
+		new VoidKaboom();
 		
 	}
 	
